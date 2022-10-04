@@ -9,30 +9,40 @@ const PossibleChoices = ["Rock", "Paper", "Scissors"];
 // 2. Get the players input of Rock, Paper or Scissors
 // 2.1 Do this with a series of buttons labeled "Rock", "Paper" and "Scissors"
 // 2.2 Store the players choice in a new variable called player choice
-var 
-    PlayerChoice = 
 
 document.querySelector('#Rock').onclick = function() {
-    PlayerChoice = "Rock";
-    ComputerChoice = PossibleChoices[Math.floor(Math.random() * PossibleChoices.length)];
+    PlayRound('Rock');
 }
 document.querySelector('#Paper').onclick = function() {
-    PlayerChoice = "Paper";
-    ComputerChoice = PossibleChoices[Math.floor(Math.random() * PossibleChoices.length)];
+    PlayRound('Paper');
 }   
 document.querySelector("#Scissors").onclick = function () {
-    PlayerChoice = "Scissors";
-    ComputerChoice = PossibleChoices[Math.floor(Math.random() * PossibleChoices.length)];
+    PlayRound('Scissors');
 }
 
 // 3. Have a function compare the players choice to the computers based on a set of rules
-function PlayRound() {
-
+function PlayRound(PlayerChoice) {
+    
+    var ComputerChoice = PossibleChoices[Math.floor(Math.random() * PossibleChoices.length)];
+    
     if (PlayerChoice === ComputerChoice) {
-        document.getElementById('#ResultsText').innerHTML = "It's a Tie!";
-    } else {
-        document.getElementById('#ResultsText').innerHTML = "We'll get to that!";
+        document.getElementById('ResultsText').innerHTML = "It's a Tie!";
+    } 
+    else if (
+        (PlayerChoice === "Rock" && ComputerChoice === "Scissors") ||
+        (PlayerChoice === "Paper" && ComputerChoice === "Rock") ||
+        (PlayerChoice === "Scissors" && ComputerChoice === "Paper")
+    ) {
+        document.getElementById('ResultsText').innerHTML = "You Win!";
+    } 
+    else if (
+        (PlayerChoice === "Rock" && ComputerChoice === "Paper") ||
+        (PlayerChoice === "Paper" && ComputerChoice === "Scissors") ||
+        (PlayerChoice === "Scissors" && ComputerChoice === "Rock")
+        ) {
+        document.getElementById('ResultsText').innerHTML = "You Lose!";
     }
+    
 }
     
 
