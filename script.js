@@ -1,24 +1,28 @@
 // 0. Create an Array for the 3 choices
 const PossibleChoices = ["Rock", "Paper", "Scissors"];
-// 1. Get computers random choice of Rock, Paper or Scissors
+// 1. Get computers random choice of Rock, Paper or Scissors  
 
-var ComputerChoice = PossibleChoices[Math.floor(Math.random() * PossibleChoices.length)];
+
+
 
 // Check 1. -> This array method works, it chooses a random variable each time
 // 2. Get the players input of Rock, Paper or Scissors
 // 2.1 Do this with a series of buttons labeled "Rock", "Paper" and "Scissors"
 // 2.2 Store the players choice in a new variable called player choice
-let 
+var 
     PlayerChoice = 
 
 document.querySelector('#Rock').onclick = function() {
     PlayerChoice = "Rock";
+    ComputerChoice = PossibleChoices[Math.floor(Math.random() * PossibleChoices.length)];
 }
 document.querySelector('#Paper').onclick = function() {
     PlayerChoice = "Paper";
-}
+    ComputerChoice = PossibleChoices[Math.floor(Math.random() * PossibleChoices.length)];
+}   
 document.querySelector("#Scissors").onclick = function () {
     PlayerChoice = "Scissors";
+    ComputerChoice = PossibleChoices[Math.floor(Math.random() * PossibleChoices.length)];
 }
 
 // 3. Have a function compare the players choice to the computers based on a set of rules
