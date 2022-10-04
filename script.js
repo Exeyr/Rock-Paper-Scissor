@@ -1,7 +1,9 @@
 // 0. Create an Array for the 3 choices
 const PossibleChoices = ["Rock", "Paper", "Scissors"];
 // 1. Get computers random choice of Rock, Paper or Scissors
-var ComputerChoice = PossibleChoices[Math.floor(Math.random() * 3)]
+
+var ComputerChoice = PossibleChoices[Math.floor(Math.random() * PossibleChoices.length)];
+
 // Check 1. -> This array method works, it chooses a random variable each time
 // 2. Get the players input of Rock, Paper or Scissors
 // 2.1 Do this with a series of buttons labeled "Rock", "Paper" and "Scissors"
@@ -23,9 +25,9 @@ document.querySelector("#Scissors").onclick = function () {
 function PlayRound() {
 
     if (PlayerChoice === ComputerChoice) {
-        document.getElementById('ResultsText').innerHTML = "It's a Tie!";
+        document.getElementById('#ResultsText').innerHTML = "It's a Tie!";
     } else {
-        document.getElementById('ResultsText').innerHTML = "We'll get to that!";
+        document.getElementById('#ResultsText').innerHTML = "We'll get to that!";
     }
 }
     
