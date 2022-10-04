@@ -10,20 +10,25 @@
     <div class="Header">
         <p class="HeaderText">Welcome to Rock-Paper-Scissors</p>
     </div>
+    
     <div class="PlayArea">    
+        
         <div class="ResultsArea">
-            <p class="ResultsText">Here are the results</p>
+            <div class="Results">
+                <p id="ResultsText"></p>
+            </div>
         </div>
+        
         <div class="ChoiceArea">    
-            <button type="button" class="ChoiceButton" onclick="PlayRound()">Rock</button>
-            <button type="button" class="ChoiceButton">Paper</button>
-            <button type="button" class="ChoiceButton">Scissors</button>
+            <button type="button" class="ChoiceButton" id="Rock" onclick="PlayRound()">Rock</button>
+            <button type="button" class="ChoiceButton" id="Paper">Paper</button>
+            <button type="button" class="ChoiceButton" id="Scissors">Scissors</button>
         </div>
+        
         <div class="ResetArea">
             <button type="button" class="ResetButton">Reset</button>
         </div>
-    </div>       
-<script src="script.js"></script>
-
+    </div>   
+    <script type = "text/javascript" src="script.js"></script>    
 </body>
 </html>

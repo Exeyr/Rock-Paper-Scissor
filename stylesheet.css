@@ -86,3 +86,18 @@ body {
     transform: translateY(5px);
     transition: all.1s;
 }
+
+.ResultsArea {
+    min-width: 300px;
+    min-height: 300px;
+}
+
+.Results {
+    min-width: 300px;
+    min-height: 300px;
+}
+
+.ResultsText {
+    min-width: 200px;
+    min-height: 200px;
+}
