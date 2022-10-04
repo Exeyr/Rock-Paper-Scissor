@@ -1,0 +1,88 @@
+@viewport {
+    width: device-width ;
+    zoom: 1.0 ;
+  } 
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Franklin Gothic Medium';
+    font-size: 24px;
+    background-color: #FBF2CF;
+    color: black;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.PlayArea {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Header {
+    display: flex;
+    flex-direction: column;
+    background-color: #FA7070;
+    min-width: 100%;
+    min-height: 100px;
+    align-items: flex-start;
+    justify-content: center;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.HeaderText {
+    padding-left: 30px;
+}
+
+.ChoiceArea {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-width: 500px;
+    width: 100%;
+}
+
+.ChoiceButton {
+    margin: 10px;
+    max-width: 500px;
+    min-width: 150px;
+    width: 100%;
+    height: 60px;
+    border-radius: 20px;
+    font-size: larger;
+    font-weight: 600;
+    background-color: #C6EBC5;
+    box-shadow: 0 5px 0 #adceac;
+    border: none;
+}
+
+.ChoiceButton:active {
+    box-shadow: none;
+    transform: translateY(5px);
+    transition: all.1s;
+}
+
+.ResetButton {
+    margin: 10px;
+    max-width: 500px;
+    min-width: 150px;
+    width: 100%;
+    height: 60px;
+    border-radius: 20px;
+    font-size: larger;
+    font-weight: 600;
+    background-color: #A1C298;
+    box-shadow: 0 5px 0 rgb(101, 129, 100);
+    border: none;
+}
+
+.ResetButton:active {
+    box-shadow: none;
+    transform: translateY(5px);
+    transition: all.1s;
+}
