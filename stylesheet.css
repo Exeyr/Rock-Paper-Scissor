@@ -183,7 +183,8 @@ body {
     margin-left: 20px;
 }
 
-@media screen and (max-width: 412px) {
+@media screen 
+and (max-width: 550px) {
     .ChoiceArea {
         display: flex;
         flex-direction: column;
