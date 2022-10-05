@@ -183,6 +183,19 @@ body {
     margin-left: 20px;
 }
 
+.Footer {
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 20px;
+    padding-left: 40px;
+    padding-top: 20px;
+    background-color: #A1C298;
+    min-width: 100%;
+    min-height: 40px;
+    align-items: center;
+    color: black;
+}
+
 @media screen 
 and (max-width: 550px) {
     .ChoiceArea {
@@ -198,5 +211,22 @@ and (max-width: 550px) {
         justify-content: center;
         align-items: center;
         text-align: center;
+    }
+
+    .Footer {
+        text-align: center;
+        padding-left: 0px;
+    }
+
+    .Header {
+        text-align: center;
+    }
+}
+
+@media screen 
+and (max-height: 550px) {
+    .Footer {
+        margin-top: 40px;
+        position: initial;
     }
 }
