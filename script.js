@@ -34,6 +34,10 @@ function PlayRound(PlayerChoice) {
         // 3.3 PlayerChoice = Scissors, then
         // 3.3.3 ComputerChoice = Scissors -> "It's a Tie!"
         // 4. Display the result on the webpage
+        tie();
+        // 5. Make functions to count score
+        // 5.1 Have the function count points for both player and computer
+        // in case of a tie
     } 
     else if (
         (PlayerChoice === "Rock" && ComputerChoice === "Scissors") ||
@@ -48,6 +52,9 @@ function PlayRound(PlayerChoice) {
         // 3.3 PlayerChoice = Scissors, then
         // 3.3.2 ComputerChoice = Paper -> "You Win!"
         // 4. Display the result on the webpage
+        win();
+        // 5. Make functions to count score
+        // 5.2 Have a function count points for player
     } 
     else if (
         (PlayerChoice === "Rock" && ComputerChoice === "Paper") ||
@@ -62,9 +69,80 @@ function PlayRound(PlayerChoice) {
         // 3.3 PlayerChoice = Scissors, then
         // 3.3.1 ComputerChoice = Rock -> "You Lose!"
         // 4. Display the result on the webpage
+        lose();
+        // 5. Make functions to count score
+        // 5.3 Have a function count points for computer
     }
     
 }
+
+let PlayerScore = 0;
+document.getElementById('PlayerPoints').innerHTML = PlayerScore;
+
+let ComputerScore = 0;
+document.getElementById('ComputerPoints').innerHTML = ComputerScore;
+// 6. Define/store variables for player and computer score
+
+function tie (PlayerChoice, ComputerChoice) {
+    PlayerScore++;
+    ComputerScore++;
+    document.getElementById('PlayerPoints').innerHTML = PlayerScore;
+    document.getElementById('ComputerPoints').innerHTML = ComputerScore;
     
-// 5. Have an option to play a GAME of 5 rounds that keeps score
-// 6. Have a reset button to essentially referesh the page
+    if (PlayerScore === 5 || ComputerScore === 5) {
+        DeclareWinner();
+    }
+}
+// 5. Make functions to count score
+// 5.1 Have the function count points for both player and computer
+// in case of a tie
+
+function win (PlayerChoice, ComputerChoice) {
+    PlayerScore++;
+    document.getElementById('PlayerPoints').innerHTML = PlayerScore;
+    
+    if (PlayerScore === 5 || ComputerScore === 5) {
+        DeclareWinner();
+    }
+}
+// 5. Make functions to count score
+// 5.2 Have a function count points for player
+
+function lose (PlayerChoice, ComputerChoice) {
+    ComputerScore++;
+    document.getElementById('ComputerPoints').innerHTML = ComputerScore;
+
+    if (PlayerScore === 5 || ComputerScore === 5) {
+        DeclareWinner();
+    }
+}
+// 5. Make functions to count score
+// 5.3 Have a function count points for computer
+
+function DeclareWinner() {
+    if (PlayerScore === 5) {
+        alert("You won the game!");
+        ResetGame();
+    } 
+    else if (ComputerScore === 5) {
+        alert("You lost the game");
+        ResetGame();
+    }
+    else if (PlayerScore === 5 && ComputerScore === 5) {
+        alert("The game is a tie!");
+        ResetGame();
+    }
+}
+// 7. Have a function declare the winner when either player or
+// computer reach a score of 5
+
+function ResetGame() {
+    PlayerScore = 0;
+    ComputerScore = 0;
+    document.getElementById('ComputerPoints').innerHTML = ComputerScore;
+    document.getElementById('PlayerPoints').innerHTML = PlayerScore;
+    document.getElementById('ResultsText').innerHTML = "Play Again?";
+
+}
+// 8. Have a function that automatically resets the game
+// 9. Have a reset button to essentially referesh the page

@@ -87,26 +87,23 @@ body {
     transition: all.1s;
 }
 
-.ResultsArea {
-    min-width: 300px;
-    min-height: 300px;
-}
-
-.Results {
-    min-width: 300px;
-    min-height: 300px;
-}
-
-.ResultsText {
-    min-width: 200px;
-    min-height: 200px;
-    height: 200px;
-    width: 200px;
-}
 
 #ResultsText {
     min-width: 200px;
     min-height: 200px;
     height: 200px;
     width: 200px;
+}
+
+.PointsArea {
+    display: flex;
+    flex-direction: row;
+}
+
+#PlayerPoints {
+    margin: 10px;
+}
+
+#ComputerPoints {
+    margin: 10px;
 }
