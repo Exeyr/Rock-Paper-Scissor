@@ -21,6 +21,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
 }
 
 .Header {
@@ -71,7 +72,7 @@ body {
     margin: 10px;
     max-width: 500px;
     min-width: 150px;
-    width: 100%;
+    width: 175px;
     height: 60px;
     border-radius: 20px;
     font-size: larger;
@@ -180,4 +181,21 @@ body {
 
 .ComputerScore {
     margin-left: 20px;
+}
+
+@media screen and (max-width: 412px) {
+    .ChoiceArea {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 500px;
+        width: 100%;
+    }
+
+    .ResetButton {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
 }
