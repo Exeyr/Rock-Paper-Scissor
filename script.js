@@ -120,16 +120,16 @@ function lose (PlayerChoice, ComputerChoice) {
 // 5.3 Have a function count points for computer
 
 function DeclareWinner() {
-    if (PlayerScore === 5) {
-        alert("You won the game!");
+    if (PlayerScore === 5 && ComputerScore === 5) {
+        alert("The game is a tie!");
         ResetGame();
     } 
     else if (ComputerScore === 5) {
         alert("You lost the game");
         ResetGame();
     }
-    else if (PlayerScore === 5 && ComputerScore === 5) {
-        alert("The game is a tie!");
+    else if (PlayerScore === 5) {
+        alert("You won the game!");
         ResetGame();
     }
 }
